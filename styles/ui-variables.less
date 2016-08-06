@@ -3,17 +3,19 @@
 //=============================== Components ===========================//
 
 //== Toolbar
-@toolbar-background-color: darken(@white, 17.5%);
+@toolbar-background-color:       @background-darkest;
+@border-color-divider:           @list-border;
 
 //== Account Sidebar
-@panel-background-color:         @gray-lighter;
+@panel-background-color:         @white;
 @source-list-bg:                 @panel-background-color;
 @source-list-active-bg:          @panel-background-color;
 @source-list-active-color:       @component-active-color;
 
 //== Thread List (e.g, `.list-group-item`, `.list-item`)
+@background-secondary:     @white;
 @list-bg:                  @white;
-@list-border:              #ddd;
+@list-border:              @white;
 @list-hover-bg:            darken(@list-bg, 4%);
 @list-focused-color:       @list-bg;
 @list-focused-bg:          @component-active-color;
@@ -48,10 +50,17 @@
 @accent-primary:      @blue;
 @accent-primary-dark: @blue-dark;
 
-@background-primary:     @white;
-@background-off-primary: #fdfdfd;
-@background-secondary:   #f6f6f6;
-@background-tertiary:    #6d7987;
+@background-primary:       @white;
+@background-off-primary:   #fdfdfd;
+@background-secondary:     #f6f6f6;
+@background-tertiary:      #6d7987;
+@background-darkest:       #161D31;
+@background-dark:          #212943;
+@background-dark-accent:   #9FAAC7;
+@background-darkest:       #F1F2F4;
+@background-dark:          #fff;
+@background-dark-accent:   lighten(#24293C, 12%);
+@background-dark-accent-2: #24293C;
 
 @color-info:    @blue-dark;
 @color-success: #5CB346;
@@ -59,7 +68,7 @@
 @color-error:   #d9534f;
 @color-danger:  #d9534f;
 
-@component-active-color:        @accent-primary-dark;
+@component-active-color:        #45aeb1;
 @component-active-bg:           @background-primary;
 
 @background-gradient: linear-gradient(to top, rgba(241,241,241,0.75) 0%,

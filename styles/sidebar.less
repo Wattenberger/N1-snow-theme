@@ -1,0 +1,70 @@
+.column-RootSidebar {
+    width: 160px !important;
+    max-width: 160px !important;
+    min-width: 160px !important;
+    margin-left: -150px;
+    background: @background-darkest;
+    color: @background-primary;
+    border-left: none;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        margin-left: 0;
+    }
+}
+
+.nylas-outline-view {
+    .heading {
+        color: @background-primary;
+    }
+
+    .item {
+        color: @background-dark-accent;
+
+        &.selected {
+            background: @background-darkest;
+        }
+    }
+}
+
+.column-MessageListSidebar, .account-sidebar {
+    background: @background-darkest;
+    color: @background-primary;
+    border: none;
+}
+
+.sidebar-section {
+    background: @background-darkest;
+    border: none;
+    color: @background-primary;
+}
+
+.related-threads {
+    border: none;
+
+    .related-thread {
+        color: @background-dark-accent;
+        cursor: pointer;
+        border: none;
+        box-shadow: none;
+
+        &:hover {
+            background: @background-darkest;
+            color: @background-dark-accent;
+        }
+    }
+
+    .toggle {
+        border: none;
+    }
+}
+
+.participant-profile .core-personal-info {
+    .full-name {
+        color: @background-dark-accent-2;
+    }
+
+    .email {
+        color: @background-dark-accent;
+    }
+}

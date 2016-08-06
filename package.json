@@ -1,7 +1,7 @@
 {
-  "name": "",
-  "title": "",
-  "displayName": "",
+  "name": "snow",
+  "title": "Snow",
+  "displayName": "Snow",
   "theme": "ui",
   "version": "0.1.0",
   "description": "",
@@ -11,4 +11,3 @@
   },
   "private": true
 }
-

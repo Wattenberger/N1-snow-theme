@@ -1,0 +1,82 @@
+
+.column-MessageListSidebar {
+    border-left: 1px solid @border-color-divider;
+}
+
+#message-list {
+    background-color: @white;
+}
+
+.column-ThreadList {
+    background: @background-darkest;
+}
+
+.thread-list .list-item {
+    height: 87px !important;
+}
+
+.thread-list, .draft-list {
+    .list-item {
+        background: @background-darkest;
+        color: @background-dark-accent;
+        border: none;
+
+        &:hover {
+            background: @background-darkest;
+            color: @background-dark-accent;
+        }
+
+        .participants-wrapper {
+            opacity: 0.4;
+        }
+
+        .snippet-and-labels {
+            opacity: 0.15;
+        }
+
+        .icons-column {
+            opacity: 0.4;
+        }
+
+        &.unread:not(.focused):not(.selected), &.unread:not(.focused):not(.selected):hover {
+            background: @background-darkest;
+            color: @background-dark-accent;
+            border: none;
+
+            .snippet {
+                color: @background-dark-accent;
+            }
+
+            .subject {
+                color: @background-dark-accent-2;
+            }
+        }
+
+        &.focused, &.focused:hover {
+            background: @background-dark;
+            color: @background-dark-accent;
+        }
+    }
+
+    .thread-icon.thread-icon-unread {
+        display: block;
+        position: relative;
+        background-image: none;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: 12px;
+            background: @background-dark-accent-2;
+            border-radius: 50%;
+            height: 6px;
+            width: 6px;
+            opacity: 0.3;
+        }
+    }
+}
+
+#message-list .message-item-wrap .message-item-white-wrap {
+    box-shadow: none;
+}

@@ -1,0 +1,47 @@
+.sheet-toolbar {
+    border-bottom: none;
+    
+    .btn-toolbar {
+        margin-left: 4px;
+        padding: 0 9px;
+        background: @white;
+        color: @background-primary;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        opacity: 0.8;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.toolbar-unsubscribe.unsubscribe-disabled {
+            background: @background-dark;
+            cursor: default;
+        }
+    }
+}
+
+.sheet-toolbar-container {
+    background-image: none;
+    background: @toolbar-background-color;
+}
+
+.search-bar .menu .header-container {
+    input {
+        padding: 0.6em 0.6em 0.6em 1.8em;
+        font-size: 0.9em;
+        line-height: 1.2em;
+        opacity: 0.6;
+
+        &:focus {
+            opacity: 1;
+        }
+    }
+
+    img {
+        opacity: 0.6;
+    }
+}
