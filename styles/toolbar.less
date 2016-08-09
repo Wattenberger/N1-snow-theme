@@ -1,11 +1,11 @@
 .sheet-toolbar {
     border-bottom: none;
-    
+
     .btn-toolbar {
+        position: relative;
         margin-left: 4px;
         padding: 0 9px;
         background: @white;
-        color: @background-primary;
         border: none;
         border-radius: 0;
         box-shadow: none;
@@ -15,11 +15,78 @@
 
         &:hover {
             opacity: 1;
+            &:before {
+                opacity: 1;
+                bottom: -5px;
+            }
+            &:after {
+                opacity: 1;
+                bottom: -5px;
+            }
+            .content-mask {
+                transform: translate3d(0, -3px, 0);
+            }
         }
 
         &.toolbar-unsubscribe.unsubscribe-disabled {
             background: @background-dark;
             cursor: default;
+
+            img {
+                opacity: 0.3;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: solid 5px transparent;
+            border-bottom-color: @component-active-color;
+            opacity: 0;
+            transform: translate3d(-50%, 0, 0);
+            transition: all 0.2s ease-out;
+            z-index: 3;
+            pointer-events: none;
+        }
+        &:after {
+            content: attr(title);
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            padding: 4px 10px;
+            transform: translate3d(-50%, 98%, 0);
+            background: @component-active-color;
+            color: @white;
+            opacity: 0;
+            white-space: nowrap;
+            z-index: 2;
+            border-radius: 2px;
+            transition: all 0.2s ease-out;
+            border: none;
+            pointer-events: none;
+        }
+        img.content-mask, &.mode-toggle.mode-false img.content-mask {
+            background: @background-dark-accent;
+            transition: transform 0.2s ease-out;
+        }
+
+        &.item-compose {
+            &:before {
+                transform: translate3d(-5px, 0, 0);
+            }
+            &:after {
+                transform: translate3d(-15px, 98%, 0);
+            }
+        }
+
+        &.mode-toggle {
+            &:after {
+                transform: translate3d(-80%, 98%, 0);
+            }
         }
     }
 }
@@ -31,7 +98,7 @@
 
 .search-bar .menu .header-container {
     input {
-        padding: 0.6em 0.6em 0.6em 1.8em;
+        padding: 0.6em 2em 0.6em 1.8em;
         font-size: 0.9em;
         line-height: 1.2em;
         opacity: 0.6;
@@ -44,4 +111,14 @@
     img {
         opacity: 0.6;
     }
+}
+
+.toolbar-RootSidebar {
+    left: 0 !important;
+    width: auto !important;
+}
+
+.toolbar-ThreadList {
+    margin-left: 78px;
+    padding-right: 78px;
 }

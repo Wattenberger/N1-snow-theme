@@ -1,6 +1,5 @@
-
-.column-MessageListSidebar {
-    border-left: 1px solid @border-color-divider;
+.column-MessageList {
+    flex-grow: 4 !important;
 }
 
 #message-list {
@@ -11,27 +10,52 @@
     background: @background-darkest;
 }
 
-.thread-list .list-item {
-    height: 87px !important;
-}
-
 .thread-list, .draft-list {
     .list-item {
+        position: relative;
         background: @background-darkest;
         color: @background-dark-accent;
         border: none;
+        animation: slideIn 0.3s ease-out;
 
         &:hover {
             background: @background-darkest;
             color: @background-dark-accent;
         }
 
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            background: @component-active-color;
+            opacity: 0;
+            transition: all 0.2s;
+        }
+
         .participants-wrapper {
             opacity: 0.4;
+            text-transform: uppercase;
+            min-height: 14px;
+
+            .participants, .timestamp {
+                font-size: 10px;
+                line-height: 1em;
+                letter-spacing: 0.06em;
+                font-weight: 600;
+            }
+        }
+
+        .subject {
+            font-size: 1.1em;
+            line-height: 1.2em;
+            margin-bottom: 0.2em;
         }
 
         .snippet-and-labels {
-            opacity: 0.15;
+            opacity: 0.35;
         }
 
         .icons-column {
@@ -55,6 +79,16 @@
         &.focused, &.focused:hover {
             background: @background-dark;
             color: @background-dark-accent;
+
+            .subject {
+                color: @component-active-color;
+                font-weight: 800;
+            }
+
+            &:before {
+                width: 3px;
+                opacity: 1;
+            }
         }
     }
 
@@ -75,6 +109,14 @@
             opacity: 0.3;
         }
     }
+}
+
+body.is-blurred .list-container .list-item.focused {
+    background: @white;
+}
+
+.list-container .list-item.focused {
+    border-bottom: none;
 }
 
 #message-list .message-item-wrap .message-item-white-wrap {
