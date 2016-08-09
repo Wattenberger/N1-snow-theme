@@ -1,7 +1,7 @@
 {
-  "name": "snow",
-  "title": "Snow",
-  "displayName": "Snow",
+  "name": "ui-snow-theme",
+  "title": "Snow Theme",
+  "displayName": "Snow Theme",
   "theme": "ui",
   "version": "0.1.0",
   "description": "",
