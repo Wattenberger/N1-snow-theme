@@ -7,7 +7,7 @@
   "description": "",
   "license": "GPL-3.0",
   "engines": {
-    "nylas": "*"
+    "mailspring": "*"
   },
   "private": true
 }
